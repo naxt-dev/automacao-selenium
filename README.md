@@ -35,6 +35,8 @@ automacao-selenium/
 │   └── login_page.py
 ├── tests/
 │   └── test_login.py
+├── .gitignore
+├── .gitattributes
 └── README.md
 ```
 
