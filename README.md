@@ -29,7 +29,7 @@ It focuses on using Python and Selenium WebDriver to interact with web pages, va
 ## Project Structure
 
 ```text
-<automacao-selenium>/
+automacao-selenium/
 ├── pages/
 │   ├── base_page.py
 │   └── login_page.py
