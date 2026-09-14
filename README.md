@@ -16,6 +16,12 @@ The objective of this project is to practice and demonstrate foundational knowle
 
 It focuses on using Python and Selenium WebDriver to interact with web pages, validate form inputs, and verify that web interfaces handle valid and invalid inputs correctly.
 
+## Test Website
+
+The automated tests in this project were developed using [The Internet](https://the-internet.herokuapp.com/login), a web application commonly used for practicing web automation and testing.
+
+The login page was used to validate successful and unsuccessful login attempts, form interactions, and error handling.
+
 ## Test Scenarios
 
 - Automated navigation to web pages
