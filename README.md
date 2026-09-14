@@ -7,6 +7,7 @@ Web test automation project using Python, Selenium WebDriver and unittest, cover
 - Python
 - Selenium WebDriver
 - unittest
+- WebDriver Manager
 - Git
 - GitHub
 
@@ -22,20 +23,59 @@ The automated tests in this project were developed using [The Internet](https://
 
 The login page was used to validate successful and unsuccessful login attempts, form interactions, and error handling.
 
+## Testing Approach
+
+The project uses Selenium WebDriver to automate interactions with the web browser and unittest to organize and execute the automated tests.
+
+The tests are executed in Microsoft Edge and use WebDriver Manager to handle the Edge WebDriver setup automatically.
+
+The login page is tested through positive and negative scenarios, validating whether the application displays the expected response for valid credentials, invalid passwords, and invalid usernames.
+
+The project also uses a simple Page Object structure to separate page interactions from test logic and improve code organization.
+
 ## Test Scenarios
 
-- Automated navigation to web pages
-- Form field interaction and data submission
-- Login interface testing
-- Validation of valid credentials and expected successful responses
-- Validation of invalid credentials and handling of invalid inputs
-- Verification of error messages and error states
-- Identification of incorrect application responses against expected behaviors
+- Automated navigation to the login page
+- Interaction with username and password fields
+- Submission of login credentials
+- Validation of successful login with valid credentials
+- Validation of login failure with an invalid password
+- Validation of login failure with an invalid username
+- Verification of success and error messages
+
+## Test Coverage
+
+The current test suite covers the following login scenarios:
+
+| Scenario | Expected Result |
+|---|---|
+| Valid username and password | Login succeeds and the secure area message is displayed |
+| Valid username and invalid password | Login is rejected and the password error message is displayed |
+| Invalid username and valid password | Login is rejected and the username error message is displayed |
+
+## Application Preview
+
+### Login Page
+
+![The Internet Login Page](docs/images/login-page.png)
+
+### Successful Login
+
+![Successful Login](docs/images/login-success.png)
+
+### Invalid Password
+
+![Invalid Password](docs/images/login-error.png)
 
 ## Project Structure
 
 ```text
 automacao-selenium/
+├── docs/
+│   └── images/
+│       ├── login-page.png
+│       ├── login-success.png
+│       └── login-error.png
 ├── pages/
 │   ├── base_page.py
 │   └── login_page.py
@@ -51,9 +91,9 @@ automacao-selenium/
 ### Prerequisites
 
 - Python 3.x
-- Supported web browser (e.g., Google Chrome or Microsoft Edge)
-- Corresponding WebDriver
-
+- Microsoft Edge
+- Internet connection
+  
 ### Clone the repository
 
 ```bash
@@ -90,7 +130,7 @@ source venv/bin/activate
 ### Install dependencies
 
 ```bash
-pip install selenium
+pip install selenium webdriver-manager
 ```
 
 ### Run the tests
@@ -105,7 +145,10 @@ python -m unittest discover -s tests -v
 
 - Web test automation with Selenium WebDriver
 - Automated interaction with web elements
+- Browser automation using Microsoft Edge
 - Test organization using unittest
+- Basic Page Object structure for test automation
+- WebDriver management using WebDriver Manager
 - Validation of expected application behaviors
 - Identification of incorrect application responses
 - Basic software quality and testing practices
